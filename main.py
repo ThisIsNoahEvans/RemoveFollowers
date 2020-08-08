@@ -1,13 +1,13 @@
 import tweepy
 import time
 
-screename = str(input('Enter the username of the account you want to remove the followers of: ')
+screenname = str(input('Enter the username of the account you want to remove the followers of: '))
 
 print('The consumer key must be of a Twitter developer account and the access key must be of the account you want to remove the followers of (they can be of the same account if you wish to remove the followers of your developer account).')
 consumerKey = str(input('Enter your consumer key: '))
-consumerSecret = str(input('Enter your consumer secret key: ')
-accessKey = str(input('Enter your access key: ')
-accessSecret = str(input('Enter your access secret key: ')
+consumerSecret = str(input('Enter your consumer secret key: '))
+accessKey = str(input('Enter your access key: '))
+accessSecret = str(input('Enter your access secret key: '))
 
 auth = tweepy.OAuthHandler(consumerKey, consumerSecret)
 auth.set_access_token(accessKey, accessSecret)
