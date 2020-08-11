@@ -18,8 +18,6 @@ ids = []
 print('Starting to block users. You\'ll see their Twitter user ID printed out when the ')
 for page in tweepy.Cursor(api.followers_ids, screen_name=screenname).pages():
     ids.extend(page)
-    #The below line might be needed depending on the amount of followers you have - for the ~450 I tested this program with it wasn't.
-    #time.sleep(60)
 
 for user in ids:
     try:
