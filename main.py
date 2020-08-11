@@ -1,5 +1,4 @@
 import tweepy
-import time
 
 screenname = str(input('Enter the username of the account you want to remove the followers of: '))
 
@@ -31,8 +30,6 @@ for user in ids:
         continue
     api.destroy_block(user)
     print('Unblocked', user)
-    #The below line might be needed depending on the amount of followers you have - for the ~450 I tested this program with it wasn't.
-    #time.sleep(5)
 
 print('Your followers should have been removed!')
 
