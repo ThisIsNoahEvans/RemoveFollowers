@@ -15,7 +15,7 @@ api = tweepy.API(auth, wait_on_rate_limit=True, wait_on_rate_limit_notify=True, 
 
 ids = []
 
-print('Starting to block users. You\'ll see their Twitter user ID printed out when the ')
+print('Starting to remove followers. You\'ll see their Twitter user ID printed out when they have been blocked and unblocked.')
 for page in tweepy.Cursor(api.followers_ids, screen_name=screenname).pages():
     ids.extend(page)
 
