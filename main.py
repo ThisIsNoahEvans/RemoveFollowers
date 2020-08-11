@@ -26,8 +26,13 @@ for user in ids:
     except:
         print('There was an error blocking the user with ID', user)
         continue
-    api.destroy_block(user)
-    print('Unblocked', user)
-
+     
+    try:
+        api.destroy_block(user)
+        print('Unblocked', user)
+    except:
+        print('There was an error unblocking the user with ID', user)
+        continue
+        
 print('Your followers should have been removed!')
 
